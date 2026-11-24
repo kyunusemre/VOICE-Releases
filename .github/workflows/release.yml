@@ -34,9 +34,12 @@ jobs:
           PYTHON: ${{ steps.setup-python.outputs.python-path }}
           npm_config_python: ${{ steps.setup-python.outputs.python-path }}
 
+      
       - name: Build and publish
         run: npm run release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PYTHON: ${{ steps.setup-python.outputs.python-path }}
           npm_config_python: ${{ steps.setup-python.outputs.python-path }}
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
