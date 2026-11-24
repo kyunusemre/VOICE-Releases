@@ -1,4 +1,5 @@
-﻿name: Build and Release VOICE
+﻿
+name: Build and Release VOICE
 
 on:
   workflow_dispatch:
@@ -8,7 +9,9 @@ permissions:
 
 jobs:
   release:
-    runs-on: windows-latest
+    runs-on: windows-2022
+    env:
+      GYP_MSVS_VERSION: '2022'
 
     steps:
       - name: Checkout
