@@ -2,7 +2,7 @@
 {
   "name": "voice-app",
   "private": true,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "TeamSpeak benzeri sesli konuşma uygulaması",
   "author": "VOICE",
   "main": "electron/main.js",
